@@ -1,8 +1,13 @@
 {
   "tasks": {
-    "dev": "deno run --watch --allow-net main.ts"
+    "dev": "deno run --watch --allow-all src/main.ts --root=./test-site --debug-log"
   },
   "imports": {
-    "@std/assert": "jsr:@std/assert@1"
+    "@std/assert": "jsr:@std/assert@1",
+    "@std/cli/parse-args": "jsr:@std/cli/parse-args",
+    "@std/fs/walk": "jsr:@std/fs/walk",
+    "@std/path": "jsr:@std/path@^1.1.6",
+    "@wcj/markdown-to-html": "npm:@wcj/markdown-to-html@^3.0.6",
+    "handlebars": "npm:handlebars"
   }
 }
